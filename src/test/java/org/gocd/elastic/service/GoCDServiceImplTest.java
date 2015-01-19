@@ -28,7 +28,7 @@ public class GoCDServiceImplTest {
         when(settings.get("Threshold")).thenReturn("2");
 
         boolean status = goCDService.isServerGood();
-        
+
         verify(goCDApi).idleAgents();
         verify(settings).get("Threshold");
 
