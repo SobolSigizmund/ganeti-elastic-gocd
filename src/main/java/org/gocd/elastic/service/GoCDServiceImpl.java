@@ -25,7 +25,7 @@ public class GoCDServiceImpl implements GoCDService {
         logger.log("Checking server status");
 
         List<Agent> agents = goCDApi.idleAgents();
-        int threshold = Integer.parseInt(settings.get("threshold"));
+        int threshold = Integer.parseInt(settings.get("Threshold"));
         if(agents.size() > threshold ) {
             logger.log("Agents are ample.");
         } else if(agents.size() == threshold) {
